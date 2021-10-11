@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+//import AddUser from './component/Users/AddUser';
+//import UserList from './component/Users/UserList';
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+//import Login from './component/Login/Login';
+import SignUp from './component/Login/SignUp';
 import './App.css';
 
-function App() {
+
+function App(){
+  /* const [usersList,setusersList ]= useState([]);
+
+  const addUserHandler=(uName,uAge)=>{
+    setusersList((prevUserList)=>{
+        return [
+          ...prevUserList,
+        {name:uName,age:uAge,id:Math.random().toString()},
+        ];
+      });
+  }; */
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div >
+   {/* <AddUser onAddUser={addUserHandler}/>
+    <UserList users={usersList}/>  */}
+     <SignUp/>
+    
+    
+  </div>
   );
 }
 
