@@ -1,0 +1,44 @@
+{
+  "loginuser": [
+    {
+      "id": 1,
+      "username": "n",
+      "role": "admin",
+      "status": "active",
+      "emailid": "n@gmail.com",
+      "password": "123"
+    },
+    {
+      "username": "Neha",
+      "role": "Employee",
+      "status": "active",
+      "password": "12341",
+      "emailid": "neha@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "Gita",
+      "role": "Employee",
+      "status": "Active",
+      "password": "1212",
+      "emailid": "Gita@gmail.com",
+      "id": 3
+    },
+    {
+      "username": "Hena",
+      "role": "Employee",
+      "status": "Active",
+      "password": "112233",
+      "emailid": "Hena@gmail.com",
+      "id": 4
+    },
+    {
+      "username": "Shital",
+      "role": "Employee",
+      "status": "Active",
+      "password": "123",
+      "emailid": "Shital@gmail.com",
+      "id": 5
+    }
+  ]
+}

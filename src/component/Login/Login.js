@@ -4,15 +4,18 @@ import './Login.Module.css';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility ,VisibilityOff} from '@material-ui/icons';
 import GoogleButton from 'react-google-button';
-import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button,Link,Typography} from '@material-ui/core';
-//import SignUp from './SignUp';
+import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button,Typography} from '@material-ui/core';
+import {Link} from "react-router-dom";
+import axios from 'axios';
+// import axios from 'axios';
+// const res = await axios.get(`some-url/todos`);
+// console.log(res)
 
 const Login =()=>{
+  
   const [values, setValues] = React.useState({
-    amount: '',
+    emailid:'',
     password: '',
-    weight: '',
-    weightRange: '',
     showPassword: false,
   });
   const handleChange = (prop) => (event) => {
@@ -29,13 +32,40 @@ const Login =()=>{
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
- 
+  const handleSubmit= e => {
+    e.preventDefault();
+    const data={
+      password:values.password,
+      
+       emailid:values.emailid,
+    };
+    // const res = axios.get(`http://localhost:3000/loginuser`);
+    // if(res.data == emailid)
+    // {
+    //       console.log({emailid});
+    // }
+    //console.log(res);
+
+    // axios.post('http://localhost:3000/loginuser',data).then(
+    //  res => {
+    //    console.log(res.data);
+   
+    //   }
+    // ).catch(
+    //   err=>{
+    //     console.log(err);
+    //   }
+    // );
   
+    // console.log(data);
+  };
+    
   const gbuttonStyle={width:'37ch', backgroundColor:'white',height:'5.5ch',color:'black'}
   const buttonStyle={margin:'8px 0',width:'42ch',height:'6ch' }
   const textfieldStyle={width:'38ch', backgroundColor:'white'}
   const avtarStyle={backgroundColor:'skyblue'}
   const paperStyle={padding:20,height:'72vh',width :380,margin:"100px auto"}
+  
    return(
       <Grid>
           <Paper elevation={10} style={paperStyle}>
@@ -44,7 +74,7 @@ const Login =()=>{
               <h1>Welcome</h1>
             </Grid>
             <Grid align="center" >
-            <TextField id="username" label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
+            <TextField id="emailid" value={values.emailid}  onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             
             <br/><br/>
             <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined" style={textfieldStyle}>
@@ -72,12 +102,12 @@ const Login =()=>{
         <br/><br/>
        
         <Typography  margin="0px 0px" >
-         <Link href="#" >Forgot password ?</Link>
+         <Link to={"/Forgot"} >Forgot password ?</Link>
         
         </Typography> 
         <br/> 
         <Grid align="center">
-             <Button variant="contained" type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
+             <Button variant="contained"  onClick={handleSubmit} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
               <br/><br/>
         <label>Or</label><br/><br/>
         <GoogleButton style={gbuttonStyle}  onClick={() => { console.log('Google button clicked') }}>Continue with Google</GoogleButton>
@@ -85,7 +115,7 @@ const Login =()=>{
         
         <Typography> Don't have an account?
           
-        <Link href="#"  onPress={() => this.props.navigation.push('SignUp')} >
+        <Link to={"/SignUp"} >
            Sign up
         </Link>
         

@@ -2,10 +2,11 @@ import React from 'react';
 //import AddUser from './component/Users/AddUser';
 //import UserList from './component/Users/UserList';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-//import Login from './component/Login/Login';
+import Login from './component/Login/Login';
 import SignUp from './component/Login/SignUp';
 import './App.css';
-
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import Forgot from './component/Login/Forgot';
 
 function App(){
   /* const [usersList,setusersList ]= useState([]);
@@ -19,14 +20,25 @@ function App(){
       });
   }; */
   return (
-  <div >
-   {/* <AddUser onAddUser={addUserHandler}/>
-    <UserList users={usersList}/>  */}
-     <SignUp/>
-    
-    
-  </div>
+      <BrowserRouter>
+          <div>
+             
+             <Switch>
+                <Route exact path="/" component={Login}/>
+                 <Route exact path="/SignUp" component={SignUp} />
+                 <Route exact path="/Forgot" component={Forgot}/>
+             </Switch>
+          </div>
+      </BrowserRouter>
   );
 }
 
 export default App;
+
+// {/* <div >
+//    {/* <AddUser onAddUser={addUserHandler}/>
+//     <UserList users={usersList}/>  */}
+//      <Login/>
+    
+    
+//   </div> */}
