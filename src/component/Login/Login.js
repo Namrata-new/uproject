@@ -1,18 +1,43 @@
-import React from 'react';
+import React,{Component} from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
 import './Login.Module.css';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility ,VisibilityOff} from '@material-ui/icons';
 import GoogleButton from 'react-google-button';
 import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button,Typography} from '@material-ui/core';
-import {Link} from "react-router-dom";
+import {Link,Redirect} from "react-router-dom";
+import Home from './Home';
 import axios from 'axios';
-// import axios from 'axios';
-// const res = await axios.get(`some-url/todos`);
-// console.log(res)
+
 
 const Login =()=>{
-  
+  async function getalluser(){
+      // console.log(values.emailid);
+    try{
+      const res = axios('http://localhost:3001/loginuser');
+      const userdata=(await res).data;
+      for( let i=0 ;i<userdata.length ;i++)
+      {
+         if(userdata[i].emailid === values.emailid && userdata[i].password === values.password)
+         {
+            
+             console.log("Login SuccessFull");
+             //<Redirect Component={Home} />
+             break;
+         }
+         else {
+              console.log("wrong data enter ");
+         }
+        // console.log(p[i].emailid);
+        // console.log(values.emailid);
+         
+      }
+    
+    }catch(error){
+      console.log("Something went wrong");
+
+    }
+   }
   const [values, setValues] = React.useState({
     emailid:'',
     password: '',
@@ -32,13 +57,7 @@ const Login =()=>{
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-  const handleSubmit= e => {
-    e.preventDefault();
-    const data={
-      password:values.password,
-      
-       emailid:values.emailid,
-    };
+  
     // const res = axios.get(`http://localhost:3000/loginuser`);
     // if(res.data == emailid)
     // {
@@ -58,7 +77,7 @@ const Login =()=>{
     // );
   
     // console.log(data);
-  };
+
     
   const gbuttonStyle={width:'37ch', backgroundColor:'white',height:'5.5ch',color:'black'}
   const buttonStyle={margin:'8px 0',width:'42ch',height:'6ch' }
@@ -107,7 +126,7 @@ const Login =()=>{
         </Typography> 
         <br/> 
         <Grid align="center">
-             <Button variant="contained"  onClick={handleSubmit} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
+             <Button variant="contained"  onClick={getalluser} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
               <br/><br/>
         <label>Or</label><br/><br/>
         <GoogleButton style={gbuttonStyle}  onClick={() => { console.log('Google button clicked') }}>Continue with Google</GoogleButton>

@@ -7,6 +7,7 @@ import SignUp from './component/Login/SignUp';
 import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Forgot from './component/Login/Forgot';
+import Home from './component/Login/Home';
 
 function App(){
   /* const [usersList,setusersList ]= useState([]);
@@ -27,6 +28,7 @@ function App(){
                 <Route exact path="/" component={Login}/>
                  <Route exact path="/SignUp" component={SignUp} />
                  <Route exact path="/Forgot" component={Forgot}/>
+                 <Route exact path="/Home" component={Home}/>
              </Switch>
           </div>
       </BrowserRouter>

@@ -48,7 +48,7 @@ const SignUp =(props)=>{
            emailid:values.emailid,
         };
         
-        axios.post('http://localhost:3000/loginuser',data).then(
+        axios.post('http://localhost:3001/loginuser',data).then(
          res => {
            console.log(res.data);
        
