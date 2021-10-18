@@ -8,6 +8,7 @@ import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Forgot from './component/Login/Forgot';
 import Home from './component/Login/Home';
+import Dashboard from './component/Dashboard/Dashboard';
 
 function App(){
   /* const [usersList,setusersList ]= useState([]);
@@ -23,15 +24,17 @@ function App(){
   return (
       <BrowserRouter>
           <div>
-             
+           
              <Switch>
-                <Route exact path="/" component={Login}/>
+                 <Route exact path="/" component={Dashboard}/>
+                 <Route exact path="/Register" component={Login}/>
                  <Route exact path="/SignUp" component={SignUp} />
                  <Route exact path="/Forgot" component={Forgot}/>
                  <Route exact path="/Home" component={Home}/>
              </Switch>
           </div>
       </BrowserRouter>
+    
   );
 }
 

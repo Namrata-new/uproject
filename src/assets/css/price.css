@@ -1,0 +1,237 @@
+
+.rt-single-icon-box.icon-center .iconbox-content .read-morebtn a {
+  /*font-size: 28px;*/
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.rt-single-icon-box.icon-center {
+  display: block;
+  padding-top: 0px;
+  padding-right:0px;
+  padding-bottom:40px;
+  padding-left: 0px;
+  border-color: rgba(0, 0, 0, .2);
+}
+
+.rt-single-icon-box.icon-center:hover {
+	-webkit-transform: scale(1.06);
+	-ms-transform: scale(1.06);
+	-o-transform: scale(1.06);
+	transform: scale(1.06);
+}
+
+.rt-single-icon-box .icon-thumb img {
+  -webkit-transition: all .24s ease-in-out;
+  transition: all .24s ease-in-out;
+  padding-top: 60px;
+}
+
+
+
+.rt-single-icon-box.icon-center .icon-thumb {
+  max-width: 100%;
+  height: auto;
+  margin-right: 0;
+  margin-bottom: 26px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  height: 200px;
+}
+/*------------ price ------------*/
+.price{
+  color:#fff;
+  background:#2c3e50;
+  height:70px;
+  overflow:hidden;
+  padding-top:20px;
+  margin-bottom:-40px;
+  font-size:1.9em;
+  font-weight:bold;
+  text-align:center;
+}
+
+/* .price sup{
+  padding:10px;
+  font-size:0.6em;
+} */
+
+/*----------- buy link ----------*/
+.buy{
+  position:absolute;
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  display:block;
+  line-height:3.4;
+  width:90px; 
+  height:90px;
+  font-size:1.7em;
+  border-radius:50%;
+  text-align:center;
+  margin-top: -28px;
+}
+
+ .basic{
+   z-index:1;
+  background:#1BBC9B;
+  left:227px; 
+   transition:all .3s linear;
+   -webkit-transition:all .3s linear;
+   
+}
+
+.basic:hover{
+   border:3px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 0 12px rgba(27,188,155,0.3);
+  transform:rotate(360deg);
+  -webkit-transform:rotate(360deg);
+  transition:all .3s linear ;
+  -webkit-transition:all .3s linear ;
+}
+
+.premium{
+  z-index:1;
+  background:#EF4836;
+  left:227px;
+  transition:all .3s linear;
+   -webkit-transition:all .3s linear;
+  
+}
+
+.premium:hover{
+  border:3px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 0 12px rgba(230,75,59,0.3);
+   transform:rotate(360deg);
+  -webkit-transform:rotate(360deg);
+  transition:all .3s linear ;
+  -webkit-transition:all .3s linear ;
+}
+
+.ultimate{
+  z-index:1;
+  background:#F7CA18;
+  left:227px;
+  transition:all .3s linear;
+   -webkit-transition:all .3s linear;
+}
+
+.ultimate:hover{
+  border:3px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 0 12px rgba(247,202,24,0.3);
+   transform:rotate(360deg);
+  -webkit-transform:rotate(360deg);
+  transition:all .3s linear ;
+  -webkit-transition:all .3s linear ;
+}
+
+/*-------------------------*/
+/*---------------- table list ----------*/
+
+.table-list{
+  list-style-type:none;
+  margin-top:0px;
+  text-align: left;
+}
+
+.table-list li{
+  padding:15px;
+  border-bottom:1px solid #ecf0f1;
+  color:#2c3e50;
+}
+
+.table-list li:nth-child(2n){
+  background:#ecf0f1;
+}
+
+
+.fa-check:before {
+  content: "\f00c";
+  color:#2ecc71;
+  padding-right:5px;
+  /*margin-left: 70px;*/
+}
+
+/* .titlespan{
+  background:#e74c3c;
+  color:#fff;
+  margin:5px;
+  padding:5px;
+  border-radius:6px;
+} */
+
+/* CSS-only ribbon styles    */
+.cnrflash
+{
+    /*Position correctly within container*/
+    position: absolute;
+    /* top: -9px; */
+    right: 8px;
+    z-index: 2; /*Set overflow to hidden, to mask inner square*/
+    overflow: hidden; /*Set size and add subtle rounding  		to soften edges*/
+    width: 100px;
+    height: 100px;
+    border-radius: 3px 5px 3px 0;
+}
+.cnrflash-inner
+{
+    /*Set position, make larger then 			container and rotate 45 degrees*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 145px;
+    height: 145px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -o-transform: rotate(45deg); /* Opera */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -webkit-transform-origin: 100% 100%; /*Purely decorative effects to add texture and stuff*/ /* Safari and Chrome */
+    -ms-transform-origin: 100% 100%;  /* IE 9 */
+    -o-transform-origin: 100% 100%; /* Opera */
+    -moz-transform-origin: 100% 100%; /* Firefox */
+    background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.1) 50%), linear-gradient(0deg, transparent 0%, rgba(1,1,1,.2) 50%);
+    background-size: 4px,auto, auto,auto;
+    background-color: #aa0101;
+    box-shadow: 0 3px 3px 0 rgba(1,1,1,.5), 0 1px 0 0 rgba(1,1,1,.5), inset 0 -1px 8px 0 rgba(255,255,255,.3), inset 0 -1px 0 0 rgba(255,255,255,.2);
+}
+.cnrflash-inner:before, .cnrflash-inner:after
+{
+    /*Use the border triangle trick to make  				it look like the ribbon wraps round it's 				container*/
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    width: 0;
+    height: 0;
+    border: 8px solid #800000;
+}
+.cnrflash-inner:before
+{
+    left: 1px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+.cnrflash-inner:after
+{
+    right: 0;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.cnrflash-label
+{
+    /*Make the label look nice*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    /* padding-bottom: 5px; */
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(1,1,1,.8);
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+}

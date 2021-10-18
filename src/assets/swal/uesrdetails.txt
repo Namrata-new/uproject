@@ -1,0 +1,78 @@
+php -S localhost:3000
+madan dubhe-
+sahosaft-
+
+Bleustar logistics 
+Bluestar logistics and supply pvt ltd
+RND group
+
+45793
+
+9743 - lr pod delete
+9453 - lr pod delete
+
+//////
+cm formula->
+temp = l1 * b1 * h1;
+calc = temp / 27000;
+fcm = calc * value * nop;
+
+inche formula->
+
+calc = temp / 1728 ; 
+finches = calc * value * nop;
+
+
+9760 - only pod delete
+6261 - double entry
+7489 - double entry
+
+10585
+
+8608
+
+
+	SHREE SANT KRIPA APPLIANCES PVT LTD.
+
+
+7485
+
+Hrms and Payroll - https://edigitech.in/sample/hr/
+
+Admin Details -> 
+
+username - admin@gmail.com
+pass 	 - admin123456
+
+Employee Details ->
+
+username - aniket@gmail.com
+pass     - aniket@123
+----------------------
+
+
+.registraion validation in patient
+.reschedule appointment logic for doctor and amdin also for patient
+
+admin details of MT
+
+username - > admin@gmail.com
+password - > admin
+
+doctor details of MT
+
+username - > shubham@gmail.com
+password - > abcd
+
+patient details of MT
+
+username - > aniket@gmail.com
+password - > aniket
+
+dislaying remote invoice to patient dashboard.
+
+10210 pod
+
+
+
+

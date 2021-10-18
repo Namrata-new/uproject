@@ -1,0 +1,185 @@
+.vertical-text-area {
+    resize: none;
+    
+    border-radius: 5px;
+    width: 90%;
+ 
+}
+textarea {
+    padding: 10px 10px;
+    min-height: 80px;
+    resize: vertical;
+   
+}
+
+.imageDiv.imgMale:before {
+    content: '';
+    display: inline-block;
+    /* vertical-align: middle; */
+    width: 80px;
+    height: 80px;
+    background: url(https://assets.icliniq.com/images/family_profile/v3/default_male-1-1.jpg);
+    background-size: 80px 80px;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+
+
+.imageDiv.imgOthers:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    background-image: url(https://assets.icliniq.com/images/family_profile/v3/some_one_else-1-1.jpg);
+    background-size: 80px 80px;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+}
+
+
+.select {
+
+    width: 150px;
+
+    margin: 10px;
+
+}
+
+select:focus {
+
+    min-width: 150px;
+
+    width: auto;
+
+}   
+
+
+
+
+.widget {
+    margin: 0 0 30px;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    border: 1px solid rgba(73, 108, 254, .5);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+    box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+}
+
+    .widget1 {
+        
+        border: 1px solid rgba(73, 108, 254, .5);
+      
+        -webkit-box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+        box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+    }
+
+    .ch{
+        float: left;
+    }
+
+    .imageDiv.imgMale:before {
+        content: '';
+        display: inline-block;
+        /* vertical-align: middle; */
+        width: 80px;
+        height: 80px;
+        background: url(https://assets.icliniq.com/images/family_profile/v3/default_male-1-1.jpg);
+        background-size: 80px 80px;
+        opacity: 0.8;
+        filter: alpha(opacity=50);
+    }
+    
+    
+    
+    .imageDiv.imgOthers:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+        background-image: url(https://assets.icliniq.com/images/family_profile/v3/some_one_else-1-1.jpg);
+        background-size: 80px 80px;
+        opacity: 0.8;
+        filter: alpha(opacity=50);
+    }
+    .button-container-div {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .widget {
+        margin: 0 0 30px;
+        padding-top: 25px;
+        padding-right: 30px;
+        padding-bottom: 25px;
+        padding-left: 30px;
+        border: 1px solid rgba(73, 108, 254, .5);
+        border-radius: 5px;
+        -webkit-box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+        box-shadow: 0 5px 20px 0 rgba(46, 25, 167, .5);
+    }
+  
+
+	.input-group-addon {
+		padding: 6px 12px;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1;
+		color: #555;
+		text-align: center;
+		background-color: #eee;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+	.input-group-addon, .input-group-btn {
+		
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+	.input-group .form-control, .input-group-addon, .input-group-btn {
+		display: table-cell;
+    }
+    
+   
+
+    @media (min-width: 992px){
+.col-md-12 {
+    width: 100%;
+}
+    }
+@media (min-width: 992px){
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+}
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.vital h5 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 18px 0;
+}
+
+.save-btn {
+    background-color: #004D61;
+    color: #fff;
+}
+
+.cancel-btn {
+    background-color: #004D61;
+    color: #fff;
+}
+

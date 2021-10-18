@@ -7,7 +7,7 @@ import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField
 import axios from 'axios';
 
 const SignUp =(props)=>{
-  
+ 
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
@@ -40,6 +40,7 @@ const SignUp =(props)=>{
       const paperStyle={padding:20,height:'72vh',width :380,margin:"100px auto"}
       const handleSubmit= e => {
         e.preventDefault();
+        
         const data={
            username:values.username,
            role:values.role,
@@ -67,7 +68,7 @@ const SignUp =(props)=>{
          <Paper style={paperStyle}>
          <Grid align="center">
             <Avatar style={avtarStyle}><LockOutlinedIcon></LockOutlinedIcon></Avatar>
-              <h2>Sign In</h2>
+              <h2>Register</h2>
             </Grid>
             <Grid align="center" >
             <TextField id="username" value={values.username}  onChange={handleChange('username')} label="User Name" variant="outlined" style={textfieldStyle} fullwidth required/>

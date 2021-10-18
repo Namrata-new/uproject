@@ -1,10 +1,23 @@
 *{
   box-sizing:border-box;
+  
 }
 html{
   font-family: sans-serif;
-  background: #1f1f1f;
-}
+  background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\all-img\banner01.png);
+
+   
+   /* background-image: url(./images/single-post-1.jpg); 
+   width:'250px' ;
+   background-repeat: "no-repeat";
+   background-position: 'center';*/
+} 
 body{
-  margin:0;
+   margin:0;
+  
+   background-size: auto;
 }
+background{
+  
+}
+

@@ -39,6 +39,14 @@
       "password": "123",
       "emailid": "Shital@gmail.com",
       "id": 5
+    },
+    {
+      "username": "Kavita",
+      "role": "Employee",
+      "status": "Active",
+      "password": "12345",
+      "emailid": "kavita@gmail.com",
+      "id": 6
     }
   ]
 }
