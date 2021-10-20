@@ -6,7 +6,7 @@ import { VisibilityOff } from '@material-ui/icons';
 import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button} from '@material-ui/core';
 import axios from 'axios';
 
-const SignUp =(props)=>{
+const Register =(props)=>{
  
     const [values, setValues] = React.useState({
         password: '',
@@ -118,4 +118,4 @@ const SignUp =(props)=>{
     );
 };
 
-export default SignUp;
+export default Register;

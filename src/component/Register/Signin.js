@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
 // import Stack from '@mui/material/Stack';
 import './Login.Module.css';
+import './Signin.Module.css';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility ,VisibilityOff} from '@material-ui/icons';
 import GoogleButton from 'react-google-button';
@@ -11,14 +12,17 @@ import axios from 'axios';
 import Alert from '@material-ui/lab/Alert';
 import AlertTitle from '@material-ui/lab/AlertTitle';
 
-const Login =()=>{
+
+const Signin =()=>{
+  
  
   async function getalluser(){
       // console.log(values.emailid);
     try{
+      
       const res = axios('http://localhost:3001/loginuser');
       const userdata=(await res).data;
-      for( let i=0 ;i<userdata.length ;i++)
+      for( let i=0 ;i<userdata.length;i++)
       {
          if(userdata[i].emailid === values.emailid && userdata[i].password === values.password)
          {
@@ -40,20 +44,24 @@ const Login =()=>{
         // console.log(p[i].emailid);
         // console.log(values.emailid);
          
-      }
+      } 
     
     }catch(error){
       console.log("Something went wrong");
-
     }
+   
    }
   const [values, setValues] = React.useState({
     emailid:'',
     password: '',
     showPassword: false,
+    emailidError:'',
+    passworderror:'',
   });
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
+   
+
   };
 
   const handleClickShowPassword = () => {
@@ -93,21 +101,20 @@ const Login =()=>{
   const textfieldStyle={width:'38ch', backgroundColor:'white'}
   const avtarStyle={backgroundColor:'skyblue'}
   const paperStyle={padding:20,height:'72vh',width :380,margin:"100px auto"}
-  const emailvalidaion={patterns:'/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'}
+  const imagesurl='C:\Users\Lenovo\mydemo\src\log.jpg';
    return(
     
       <Grid>
           <Paper elevation={10} style={paperStyle}>
             <Grid align="center">
-            {/* <Stack direction="row" spacing={2}>
-               <Avatar alt="Remy Sharp" src="C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg" />
-      
-            </Stack> */}
             
+               {/* <Avatar  src="C:\Users\Lenovo\mydemo\src\assets\images\logo\log.png" /> */}
+               <Avatar  src={imagesurl} />
+           
             <h1>Welcome</h1>
             </Grid>
             <Grid align="center" >
-            <TextField id="emailid" value={values.emailid} pattern={'/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'} onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
+            <TextField id="emailid" value={values.emailid}  onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             
             <br/><br/>
             <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined" style={textfieldStyle}>
@@ -161,5 +168,5 @@ const Login =()=>{
    );
 };
 
-export default Login;
+export default Signin;
 

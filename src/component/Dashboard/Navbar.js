@@ -69,7 +69,7 @@ const Navbar = () => {
                  
                 </NavItem>
                 <NavItem>
-                <a href="/SighIn" style={aRegisterStyle}><FontAwesomeIcon icon="user-circle" ></FontAwesomeIcon>Sign In</a>
+                <a href="/Signin" style={aRegisterStyle}><FontAwesomeIcon icon="user-circle" ></FontAwesomeIcon>Sign In</a>
                 </NavItem>
                 <NavItem>
    
@@ -100,11 +100,11 @@ const Navbar = () => {
                        <i class="fa fa-caret-down"></i>
                   </a>
                    <div class="dropdown-content" >
-                     <a href="#"  >About us</a>
-                     <a href="#">Affiliate Program</a>
-                     <a href="#">Service</a>
-                     <a href="#">Help</a>
-                     <a href="#">How it works</a>
+                     <a href="/Aboutus"  >About us</a>
+                     <a href="/Affiliateprogram">Affiliate Program</a>
+                     <a href="/Service">Service</a>
+                     <a href="/Help">Help</a>
+                     <a href="/Howitworks">How it works</a>
                    </div>
                 </div> 
                 </NavItem>             
@@ -114,9 +114,9 @@ const Navbar = () => {
                        <i class="fa fa-caret-down"></i>
                   </a>
                   <div class="dropdown-content">
-                     <a href="#">Standard</a>
-                     <a href="#">premium</a>
-                     <a href="#">Compare</a>
+                     <a href="/Standard">Standard</a>
+                     <a href="/Premium">Premium</a>
+                     <a href="/Compare">Compare</a>
                   </div>
                 </div> 
                 
@@ -131,10 +131,10 @@ const Navbar = () => {
                        <i class="fa fa-caret-down"></i>
                   </a>
                   <div class="dropdown-content">
-                     <a href="#">Blog</a>
-                     <a href="#">Blog 1</a>
-                     <a href="#">Blog 2</a>
-                     <a href="#">Blog 3</a>
+                     <a href="/Blog">Blog</a>
+                     <a href="/Blog1">Blog 1</a>
+                     <a href="/Blog2">Blog 2</a>
+                     <a href="/Blog3">Blog 3</a>
                    
                   </div>
                 </div> 

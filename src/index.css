@@ -17,5 +17,6 @@ body{
   
    background-size: auto;
 }
-
-
+.avatar{
+  background-image: url(C:\Users\Lenovo\mydemo\src\log.jpg);
+}
