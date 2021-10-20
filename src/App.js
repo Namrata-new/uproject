@@ -1,4 +1,5 @@
 import React from 'react';
+import './component/fontawesomeicon';
 //import AddUser from './component/Users/AddUser';
 //import UserList from './component/Users/UserList';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -7,8 +8,8 @@ import SignUp from './component/Login/SignUp';
 import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import Forgot from './component/Login/Forgot';
-import Home from './component/Login/Home';
-import Dashboard from './component/Dashboard/Dashboard';
+import Home from './component/Home/Home';
+import Navbar from './component/Dashboard/Navbar';
 
 function App(){
   /* const [usersList,setusersList ]= useState([]);
@@ -26,11 +27,12 @@ function App(){
           <div>
            
              <Switch>
-                 <Route exact path="/" component={Dashboard}/>
+                 <Route exact path="/" component={Navbar}/>
                  <Route exact path="/Register" component={Login}/>
                  <Route exact path="/SignUp" component={SignUp} />
                  <Route exact path="/Forgot" component={Forgot}/>
                  <Route exact path="/Home" component={Home}/>
+                 <Route exact path="/AboutUs" component={Home}/>
              </Switch>
           </div>
       </BrowserRouter>

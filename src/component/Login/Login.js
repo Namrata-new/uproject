@@ -1,5 +1,6 @@
 import React from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
+// import Stack from '@mui/material/Stack';
 import './Login.Module.css';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility ,VisibilityOff} from '@material-ui/icons';
@@ -98,8 +99,12 @@ const Login =()=>{
       <Grid>
           <Paper elevation={10} style={paperStyle}>
             <Grid align="center">
-            <Avatar style={avtarStyle} src="C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg"></Avatar>
-              <h1>Welcome</h1>
+            {/* <Stack direction="row" spacing={2}>
+               <Avatar alt="Remy Sharp" src="C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg" />
+      
+            </Stack> */}
+            
+            <h1>Welcome</h1>
             </Grid>
             <Grid align="center" >
             <TextField id="emailid" value={values.emailid} pattern={'/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'} onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
