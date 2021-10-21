@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import './component/fontawesomeicon';
 //import AddUser from './component/Users/AddUser';
 //import UserList from './component/Users/UserList';
@@ -25,6 +25,10 @@ import Blog3 from './component/Blog/Blog3';
 import Contactus from './component/Contactus/Contactus';
 
 function App(){
+  useEffect(() => {
+    document.title = "eHealthflex Technologis- Medical Tourism ";
+    
+  }, [])
   /* const [usersList,setusersList ]= useState([]);
 
   const addUserHandler=(uName,uAge)=>{
@@ -36,6 +40,7 @@ function App(){
       });
   }; */
   return (
+    
       <BrowserRouter>
           <div>
            

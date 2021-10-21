@@ -19,3 +19,7 @@
   .error {
     color: red;
   }
+  .TextField:focus{
+    border-color: skyblue;
+  }
+  

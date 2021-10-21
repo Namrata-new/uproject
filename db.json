@@ -3,50 +3,50 @@
     {
       "id": 1,
       "username": "n",
-      "role": "admin",
-      "status": "active",
       "emailid": "n@gmail.com",
       "password": "123"
     },
     {
       "username": "Neha",
-      "role": "Employee",
-      "status": "active",
       "password": "12341",
       "emailid": "neha@gmail.com",
       "id": 2
     },
     {
       "username": "Gita",
-      "role": "Employee",
-      "status": "Active",
       "password": "1212",
       "emailid": "Gita@gmail.com",
       "id": 3
     },
     {
       "username": "Hena",
-      "role": "Employee",
-      "status": "Active",
       "password": "112233",
       "emailid": "Hena@gmail.com",
       "id": 4
     },
     {
       "username": "Shital",
-      "role": "Employee",
-      "status": "Active",
       "password": "123",
       "emailid": "Shital@gmail.com",
       "id": 5
     },
     {
       "username": "Kavita",
-      "role": "Employee",
-      "status": "Active",
       "password": "12345",
       "emailid": "kavita@gmail.com",
       "id": 6
+    },
+    {
+      "username": "Hemesh",
+      "password": "123455",
+      "emailid": "hemesh@gmail.com",
+      "id": 7
+    },
+    {
+      "username": "Revti Sharma",
+      "password": "34568",
+      "emailid": "revti@gmail.com",
+      "id": 9
     }
   ]
 }

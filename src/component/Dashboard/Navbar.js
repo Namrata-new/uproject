@@ -85,8 +85,8 @@ const Navbar = () => {
         <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
            <NavContainer>
            <a class="navbar-brand" href="/">
-           <div class="image">
-            <img url="C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg"  />
+           <div>
+            <img  src={process.env.PUBLIC_URL + "/logo.png"}  />
               </div>
               </a>
              

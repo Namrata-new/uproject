@@ -9,15 +9,16 @@ import GoogleButton from 'react-google-button';
 import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button,Typography} from '@material-ui/core';
 import {Link} from "react-router-dom";
 import axios from 'axios';
-import Alert from '@material-ui/lab/Alert';
+import ErrorModal from "../UI/ErrorModal";
 import AlertTitle from '@material-ui/lab/AlertTitle';
+import Alert from 'react-popup-alert';
 
 
-const Signin =()=>{
-  
- 
-  async function getalluser(){
-      // console.log(values.emailid);
+const Signin =(props)=>{
+  const[error,setError]=useState();
+
+    async function getalluser(){
+     
     try{
       
       const res = axios('http://localhost:3001/loginuser');
@@ -27,19 +28,26 @@ const Signin =()=>{
          if(userdata[i].emailid === values.emailid && userdata[i].password === values.password)
          {
         
-          <Alert severity="success">
-          <AlertTitle>Success</AlertTitle>
-          You have successFull Login — <strong>check it out!</strong>
-          </Alert>
-            
-             console.log("Login SuccessFull");
+          // <Alert severity="success">
+          // <AlertTitle>Success</AlertTitle>
+          // You have successFull Login — <strong>check it out!</strong>
+          // </Alert>
+             setError({
+            title:'Sucess',
+            message:'Login SuccessFull'
+          });
+          return;
+            // console.warn("Login SuccessFull");
              //return ({pathname:"/Home"});
              //
-             break;
+            
          }
          else {
-              console.log("wrong data enter ");
-              break;
+                setError({
+                     title:'Warning',
+                     message:'Input Username and Password'
+                    });
+                 return;
          }
         // console.log(p[i].emailid);
         // console.log(values.emailid);
@@ -63,6 +71,8 @@ const Signin =()=>{
    
 
   };
+   const errorHandler=()=>{
+     setError(null);}
 
   const handleClickShowPassword = () => {
     setValues({
@@ -100,21 +110,24 @@ const Signin =()=>{
   const buttonStyle={margin:'8px 0',width:'42ch',height:'6ch' }
   const textfieldStyle={width:'38ch', backgroundColor:'white'}
   const avtarStyle={backgroundColor:'skyblue'}
-  const paperStyle={padding:20,height:'72vh',width :380,margin:"100px auto"}
-  const imagesurl='C:\Users\Lenovo\mydemo\src\log.jpg';
+  const paperStyle={padding:20,height:'74vh',width :380,margin:"100px auto"}
+  const imagesurl='C:\Users\Lenovo\mydemo\src\log.png';
    return(
     
       <Grid>
+        {error && (
+        <ErrorModal 
+        title={error.title} 
+        message={error.message} 
+        onConfirm={errorHandler} />)}
           <Paper elevation={10} style={paperStyle}>
             <Grid align="center">
             
-               {/* <Avatar  src="C:\Users\Lenovo\mydemo\src\assets\images\logo\log.png" /> */}
-               <Avatar  src={imagesurl} />
-           
+            <Avatar src={process.env.PUBLIC_URL + "/log.png"}  style={{ width: 56, height: 56 }}/>
             <h1>Welcome</h1>
             </Grid>
             <Grid align="center" >
-            <TextField id="emailid" value={values.emailid}  onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
+            <TextField  id="emailid" value={values.emailid}  onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             
             <br/><br/>
             <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined" style={textfieldStyle}>
@@ -155,14 +168,15 @@ const Signin =()=>{
         
         <Typography> Don't have an account?
           
-        <Link to={{pathname:"/SignUp"} }>
+        <Link to={{pathname:"/Register"} }>
            Sign up
         </Link>
-        
+               
         </Typography> 
        
         </Grid>
         </Paper>
+       
       </Grid>
       
    );

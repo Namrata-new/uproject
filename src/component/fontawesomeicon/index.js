@@ -1,4 +1,4 @@
 import {library} from '@fortawesome/fontawesome-svg-core';
-import { faHeadset,faEnvelope,faUserPlus,faUserCircle,faGlobe} from '@fortawesome/free-solid-svg-icons';
+import { faHeadset,faEnvelope,faUserPlus,faUserCircle,faGlobe,faHome,faAngleRight} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHeadset,faEnvelope,faUserPlus,faUserCircle,faGlobe);
+library.add(faHeadset,faEnvelope,faUserPlus,faUserCircle,faGlobe,faHome,faAngleRight);

@@ -1,18 +1,17 @@
-import React  from 'react';
+import React,{useState}  from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility } from '@material-ui/icons';
 import { VisibilityOff } from '@material-ui/icons';
 import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button} from '@material-ui/core';
 import axios from 'axios';
+import ErrorModal from "../UI/ErrorModal";
 
 const Register =(props)=>{
- 
+  const[Message,setMessage]=useState();
     const [values, setValues] = React.useState({
         password: '',
         showPassword: false,
-        role:'',
-        status:'',
         emailid:'',
         username:'',
       });
@@ -33,18 +32,18 @@ const Register =(props)=>{
         event.preventDefault();
       };
     
+      const messageHandler=()=>{
+        setMessage(null);}
       
       const buttonStyle={margin:'8px 0',width:'43ch',height:'6ch'}
       const textfieldStyle={width:'38ch', backgroundColor:'white'}
       const avtarStyle={backgroundColor:'skyblue'}
-      const paperStyle={padding:20,height:'72vh',width :380,margin:"100px auto"}
+      const paperStyle={padding:20,height:'60vh',width :380,margin:"100px auto"}
       const handleSubmit= e => {
         e.preventDefault();
         
         const data={
            username:values.username,
-           role:values.role,
-           status:values.status,
            password:values.password,
            emailid:values.emailid,
         };
@@ -52,7 +51,10 @@ const Register =(props)=>{
         axios.post('http://localhost:3001/loginuser',data).then(
          res => {
            console.log(res.data);
-       
+           setMessage({
+            title:'Success',
+            message:'Data SuccessFully Saved !'
+           });
           }
         ).catch(
           err=>{
@@ -65,17 +67,18 @@ const Register =(props)=>{
     return(
       
         <Grid>
+          {Message && (
+        <ErrorModal 
+        title={Message.title} 
+        message={Message.message} 
+        onConfirm={messageHandler} />)}
          <Paper style={paperStyle}>
          <Grid align="center">
-            <Avatar style={avtarStyle}><LockOutlinedIcon></LockOutlinedIcon></Avatar>
+           <Avatar src={process.env.PUBLIC_URL + "/log.png"}  style={{ width: 56, height: 56 }} />
               <h2>Register</h2>
             </Grid>
             <Grid align="center" >
             <TextField id="username" value={values.username}  onChange={handleChange('username')} label="User Name" variant="outlined" style={textfieldStyle} fullwidth required/>
-            <br/><br/>
-            <TextField id="role"  value={values.role} onChange={handleChange('role')} label="Role" variant="outlined" style={textfieldStyle} fullwidth required/>
-            <br/><br/>
-            <TextField id="status"  value={values.status} onChange={handleChange('status')} label="Status" variant="outlined" style={textfieldStyle} fullwidth required/>
             <br/><br/>
             <TextField id="emailid"  value={values.emailid} onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             <br/><br/>
