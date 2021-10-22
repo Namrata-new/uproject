@@ -1,13 +1,14 @@
 import React, { useState, Fragment }from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
-import {Link} from "react-router-dom";
-import PersonAddAlt1Icon from '@material-ui/icons/PersonAdd';
 import "./Navbarstyle";
+import "./Navbar.css";
+//import { Stack } from '@mui/material';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-
-
+import Image from 'react-bootstrap/Image';
+import Col from 'react-bootstrap/Col';
+import {Link} from "react-router-dom";
+import PersonAddAlt1Icon from '@material-ui/icons/PersonAdd';
 import {
   Nav,
   NavContainer, 
@@ -22,6 +23,7 @@ import {
 import classes from "./Navbar.css";
 
 const Navbar = () => {
+       const h4style={color:'gray'};
      // const image=imageUrl('C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg');
         const [colorChange, setColorchange] = useState(false);
         const changeNavbarColor = () =>{
@@ -37,6 +39,7 @@ const Navbar = () => {
         const selectStyle={align:'Left',width:"6pc",height:"2pc"}
         const aRegisterStyle={align:'Left',color:"White"}
         const divStyle={color:"Gray"}
+        
       return (
           <Grid >
             <Fragment >
@@ -64,8 +67,7 @@ const Navbar = () => {
                 </div> 
                 </NavItem>             
                 <NavItem>
-                 
-               
+            
                  
                 </NavItem>
                 <NavItem>
@@ -80,7 +82,7 @@ const Navbar = () => {
         </Nav>
       </Fragment>  
       
-     
+    
       <Fragment align="left" >
         <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
            <NavContainer>
@@ -89,15 +91,17 @@ const Navbar = () => {
             <img  src={process.env.PUBLIC_URL + "/logo.png"}  />
               </div>
               </a>
-             
+           
               <NavMenu>
+             
                 <NavItem>
                   <a href="/Home" >Home</a>
                 </NavItem>
                 <NavItem>
+                
                 <div class="dropdown">
                   <a class="dropbtn" href="/AboutUs">About us 
-                       <i class="fa fa-caret-down"></i>
+                    
                   </a>
                    <div class="dropdown-content" >
                      <a href="/Aboutus"  >About us</a>
@@ -109,16 +113,18 @@ const Navbar = () => {
                 </div> 
                 </NavItem>             
                 <NavItem>
+                 
                 <div class="dropdown">
                   <a class="dropbtn" href="/Torisumpackage">Torisum Package 
-                       <i class="fa fa-caret-down"></i>
+                      
                   </a>
                   <div class="dropdown-content">
-                     <a href="/Standard">Standard</a>
+                    <a  href="/Standard">Standard</a>
                      <a href="/Premium">Premium</a>
                      <a href="/Compare">Compare</a>
                   </div>
                 </div> 
+               
                 
                  
                 </NavItem>
@@ -131,32 +137,126 @@ const Navbar = () => {
                        <i class="fa fa-caret-down"></i>
                   </a>
                   <div class="dropdown-content">
+                    <ul >
                      <a href="/Blog">Blog</a>
                      <a href="/Blog1">Blog 1</a>
                      <a href="/Blog2">Blog 2</a>
                      <a href="/Blog3">Blog 3</a>
-                   
+                   </ul>
                   </div>
                 </div> 
                 </NavItem>
                 <NavItem>
-                  <a  class="link-button" href="/Contactus"><b>Contact Us</b></a>
+                  <a  class="link-button" href="/Contactus">Contact Us</a>
                 </NavItem>
+             
               </NavMenu>
            </NavContainer>
         </Nav>
       </Fragment>
-    
+       <Grid class="grid"> 
+         
+         <NavContainer>
+        
+           <a class="navbar-brand" >
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+           
+          
+           <Col xs={6} md={4}><Image src={process.env.PUBLIC_URL + "/mt.png"} rounded />
+           <h4 style={h4style} >Looking for a stress-free medical journey? </h4>
+           </Col></a>
+           </NavContainer>  </Grid>
+           <Grid > 
+           <Fragment > 
+           <NavContainer>
+           
+           <div>
+           <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <br/>
+             <div class="div">
+               <section class="emigr-services-area-rtbgprefix-contain">
+               
+               <div class="container">
+              <div class="row">
+              <div class="section-title-spacer"></div>
+                <div class="col-lg-8 text-center mx-auto">
+                    <div class="rt-section-title-wrapper">
+                        <h2 class="rt-section-title">
+                            <span>Reach Out Before You Fly Out</span>
+                            Connect with the Leading Doctors & Hospitals
+                        </h2>
+                        <p>
+                        You can rely on us for choosing the top specialists and clinics.  The list of doctors and hospitals present on the portal is curated after thorough research and you can expect to find the best-fit as per your requirement. You can rely on us for finding the best doctors in India and around the globe. This is not a google promoted list that we provide.</p>
+                    </div>
+                </div>
+            </div>
+            </div> 
+        <div class="spacer-bottom"></div>
+        </section>
+             </div>
+             </div>
+           </NavContainer></Fragment>  </Grid> 
+        
+     
        </Grid>
     );
 };
   
 export default Navbar;
-          {/* <Avatar style={avtarStyle}>Register</Avatar> 
-          <Link to="/Register" align="left"><PersonAddAlt1Icon  ></PersonAddAlt1Icon>Register</Link>
-          <Avatar style={avtarStyle} src="C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg"></Avatar>
-          </Grid>
-      );
-
-};
-export default Dashboard; */}
+        

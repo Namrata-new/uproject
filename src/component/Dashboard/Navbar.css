@@ -4,7 +4,9 @@
   }
   
   .navbar.colorChange{
-    background-color: red;
+    background-color: gray;
+    position:fixed;
+    width: 100%;
   }
   .image{
     width: 46px;
@@ -17,29 +19,33 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    background-color: White;
+    list-style-type: none;
+    position: fixed;
+    overflow: auto;
   }
   
   li {
     float: left;
   }
   
-  li a {
+  li a ,.dropbtn{
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
+  li.dropdown {
+    display: inline-block;
+  }
+  
   
   li a:hover:not(.active) {
    color: rgb(240, 22, 22);
+  
   }
   
-  .active {
-    background-color: #04AA6D;
-  }
   .NavMenu{
       color: white;
   }
@@ -51,10 +57,7 @@
 
     color: #aa8d56;
 
-    outline: medium none;
-
-  
-
+    outline: medium none; 
     text-decoration: none;
     padding: 1rem 1rem;
     cursor: pointer;
@@ -65,40 +68,100 @@
 
 }
 .link-button:hover{
-    color: rgb(243, 82, 8) ;
-   
+  background: rgb(15, 90, 189) ;
+  
 
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
 .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    background-color: transparent;
-  }
-  .select{
-    background-color: #f9f9f9;
-  }
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
   .option:hover{
     background-color:red;
   }
-  
 
+  .grid{
+    background: transparent;
+height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+/* Fix your navbar by using below two lines of code */
+position: sticky;
+top:0;
+/* Fix your navbar by using above two lines of code */
+
+
+
+
+  }
+  .container{
+    display: flex;
+justify-content: space-between;
+height: 80px;
+
+width: 100%;
+padding: 0 24px;
+max-width: 1100px;
+  }
+
+.h3{
+     text-align: center;
+     color:'blue';
+     
+   
+
+
+  }
+  .section-title-spacer {
+    height: 40px;
+}
+.spacer-bottom {
+  height: 85px;
+}
+.rt-section-title {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-transform: capitalize;
+  color: #004D61;
+  justify-content:'center';
+  justify-content:'center';
+  align-items: 'center';
+  left: 50%;
+  transform: translate( 34%);
+}
+.div{
+  color: 'skyblue';
+  background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\dotbg.png);
+  justify-content:'center';
+  align-items: 'center';
+  
+ }
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

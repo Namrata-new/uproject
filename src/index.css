@@ -5,8 +5,8 @@
 html{
   font-family: sans-serif;
   background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\all-img\banner01.png);
-
-   
+  background-repeat: no-repeat;
+    
    /* background-image: url(./images/single-post-1.jpg); 
    width:'250px' ;
    background-repeat: "no-repeat";
