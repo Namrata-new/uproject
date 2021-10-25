@@ -23,7 +23,9 @@ import Blog1 from './component/Blog/Blog1';
 import Blog2 from './component/Blog/Blog2';
 import Blog3 from './component/Blog/Blog3';
 import Contactus from './component/Contactus/Contactus';
-
+import Support from './component/Support/Support';
+import Footer from './component/Footer/Footer';
+import Convertion from './component/Convertion/Convertion';
 function App(){
   useEffect(() => {
     document.title = "eHealthflex Technologis- Medical Tourism ";
@@ -46,6 +48,7 @@ function App(){
            
              <Switch>
                  <Route exact path="/" component={Navbar}/>
+
                  <Route exact path="/Register" component={Register}/>
                  <Route exact path="/Signin" component={Signin} />
                  <Route exact path="/Forgot" component={Forgot}/>
@@ -63,11 +66,13 @@ function App(){
                  <Route exact path="/Blog2" component={Blog2} />
                  <Route exact path="/Blog3" component={Blog3}/>
                  <Route exact path="/Contactus" component={Contactus}/>
+                 <Route exact path="/Support" component={Support} />
                 
              </Switch>
-          </div>
+         </div>
       </BrowserRouter>
-    
+     
+      
   );
 }
 

@@ -19,6 +19,7 @@ const Signin =(props)=>{
 
     async function getalluser(){
      
+     
     try{
       
       const res = axios('http://localhost:3001/loginuser');
@@ -120,18 +121,21 @@ const Signin =(props)=>{
         title={error.title} 
         message={error.message} 
         onConfirm={errorHandler} />)}
+      
           <Paper elevation={10} style={paperStyle}>
             <Grid align="center">
             
             <Avatar src={process.env.PUBLIC_URL + "/log.png"}  style={{ width: 56, height: 56 }}/>
             <h1>Welcome</h1>
             </Grid>
+           
             <Grid align="center" >
             <TextField  id="emailid" value={values.emailid}  onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             
             <br/><br/>
             <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined" style={textfieldStyle}>
-          <InputLabel htmlFor="outlined-adornment-password" required>Password</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
@@ -160,7 +164,7 @@ const Signin =(props)=>{
         </Typography> 
         <br/> 
         <Grid align="center">
-             <Button variant="contained"  onClick={getalluser} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
+             <Button variant="contained" onClick={getalluser} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
               <br/><br/>
         <label>Or</label><br/><br/>
         <GoogleButton style={gbuttonStyle}  onClick={() => { console.log('Google button clicked') }}>Continue with Google</GoogleButton>
@@ -175,6 +179,7 @@ const Signin =(props)=>{
         </Typography> 
        
         </Grid>
+       
         </Paper>
        
       </Grid>

@@ -1,0 +1,17 @@
+footer {
+    text-align: center;
+    padding: 1.5px;
+    background-color: black;
+    color: white;
+    justify-content:bottom;
+    position:inherit;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+  
+  }
+  .img{
+      background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\footerbg.png);
+      background-repeat: no-repeat;
+  }
+  

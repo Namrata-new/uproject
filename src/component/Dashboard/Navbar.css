@@ -1,12 +1,20 @@
 
 .navbar{
     background-color: transparent;
+    color:skyblue;;
   }
   
   .navbar.colorChange{
     background-color: gray;
+    color :skyblue;
     position:fixed;
     width: 100%;
+  }
+  .navbar.fontcolorChange{
+  
+    color :black;
+    position:fixed;
+   
   }
   .image{
     width: 46px;
@@ -14,6 +22,10 @@
     border-radius: 50%;
     overflow: hidden;
     margin-top: -6px;
+  }
+  .img{
+    background-color: transparent;
+
   }
   ul {
     list-style-type: none;
@@ -38,6 +50,7 @@
   }
   li.dropdown {
     display: inline-block;
+   
   }
   
   
@@ -48,6 +61,7 @@
   
   .NavMenu{
       color: white;
+     
   }
   .link-button {
 
@@ -64,13 +78,19 @@
     border-radius: 14px;
     width: 8pc;
     height: 3pc;
+    box-shadow: 3pc;
     
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 .link-button:hover{
   background: rgb(15, 90, 189) ;
   
 
+}
+.example1 {
+  background: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\dotbg.png) right bottom no-repeat;
+  padding: 15px;
 }
 .dropdown-content {
   display: none;
@@ -141,27 +161,71 @@ max-width: 1100px;
   height: 85px;
 }
 .rt-section-title {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
   margin: 0 0 20px;
   text-transform: capitalize;
-  color: #004D61;
-  justify-content:'center';
-  justify-content:'center';
-  align-items: 'center';
-  left: 50%;
-  transform: translate( 34%);
+  color: skyblue;
+  font:bold;
+
+  font-style: sans-serif;
+  left: 30%;
+  transform: translate(30%);
 }
-.div{
+.rt1-section-title{
+  font-size:70px;
+  font-weight: 700;
+  
+  color: #004D61;
+  
+  
+}
+.card{
   color: 'skyblue';
   background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\dotbg.png);
   justify-content:'center';
   align-items: 'center';
+  font-size: x-large;
+
   
  }
-.centered{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+ .card::content{
+  justify-content:'center';
+ }
+ .column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+ 
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  justify-content: center;
+  background-color: transparent;
+  color:skyblue;
+}
+.label{
+  color:black;
+  font-size: x-small;
 }

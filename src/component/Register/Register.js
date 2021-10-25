@@ -47,7 +47,19 @@ const Register =(props)=>{
            password:values.password,
            emailid:values.emailid,
         };
-        
+        if(data.username==="" ){
+          setMessage({
+            title:'Enter Blank',
+            message:'Enter values in Textbox '
+           });
+        }
+        else if(data.password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)  && data.emailid.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+             console.log("proper password and email id");
+        }
+        else
+        {
+          console.log("enter the proper pASS");
+        }
         axios.post('http://localhost:3001/loginuser',data).then(
          res => {
            console.log(res.data);
@@ -83,8 +95,9 @@ const Register =(props)=>{
             <TextField id="emailid"  value={values.emailid} onChange={handleChange('emailid')} label="Email Id" variant="outlined" style={textfieldStyle} fullwidth required/>
             <br/><br/>
           <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined"  style={textfieldStyle}>
-          <InputLabel htmlFor="outlined-adornment-password"  >Password</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-password" pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/ "  >Password</InputLabel>
           <OutlinedInput
+          
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
             value={values.password}

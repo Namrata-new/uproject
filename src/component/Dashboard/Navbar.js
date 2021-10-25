@@ -2,6 +2,7 @@ import React, { useState, Fragment }from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
 import "./Navbarstyle";
 import "./Navbar.css";
+import {Card,Typography,CardContent } from "@material-ui/core";
 //import { Stack } from '@mui/material';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,20 +27,24 @@ const Navbar = () => {
        const h4style={color:'gray'};
      // const image=imageUrl('C:\Users\Lenovo\mydemo\src\assets\images\logo\logo.jpg');
         const [colorChange, setColorchange] = useState(false);
+   
         const changeNavbarColor = () =>{
            if(window.scrollY >= 80){
              setColorchange(true);
+            
            }
            else{
              setColorchange(false);
+           
            }
         };
         window.addEventListener('scroll', changeNavbarColor);
+       
         const aStyle={align:'Right',color:"Black"}
         const selectStyle={align:'Left',width:"6pc",height:"2pc"}
         const aRegisterStyle={align:'Left',color:"White"}
-        const divStyle={color:"Gray"}
-        
+       
+       
       return (
           <Grid >
             <Fragment >
@@ -50,7 +55,7 @@ const Navbar = () => {
                &ensp; &ensp;
                <a href="/Email" style={aStyle}><FontAwesomeIcon icon="envelope" ></FontAwesomeIcon>info@ehealthflex.com</a>
                </Grid>
-               <NavMenu>
+               <NavMenu >
                 <NavItem>
                 <div class="dropdown">
                   <a class="dropbtn" href="/Languages" style={aRegisterStyle}><FontAwesomeIcon icon="globe" ></FontAwesomeIcon> Languages </a>
@@ -88,14 +93,14 @@ const Navbar = () => {
            <NavContainer>
            <a class="navbar-brand" href="/">
            <div>
-            <img  src={process.env.PUBLIC_URL + "/logo.png"}  />
+            <img  class="img" src={process.env.PUBLIC_URL + "/logo.png"}  />
               </div>
               </a>
            
               <NavMenu>
              
                 <NavItem>
-                  <a href="/Home" >Home</a>
+                 <a href="/Home" >Home</a>
                 </NavItem>
                 <NavItem>
                 
@@ -167,93 +172,50 @@ const Navbar = () => {
            <h4 style={h4style} >Looking for a stress-free medical journey? </h4>
            </Col></a>
            </NavContainer>  </Grid>
-           <Grid > 
-           <Fragment > 
+
+
+           <Fragment align="center" >
+        <Nav >
            <NavContainer>
-           
-           <div>
-           <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <br/>
-             <div class="div">
-               <section class="emigr-services-area-rtbgprefix-contain">
+          
+             
+                <div class="rt-section-title">
+                 
+                  <br/>
+
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/><br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>  
+                 <br/>
+                  
+                 <div class="card">
+                   REACH OUT BEFORE YOU FLY OUT
+                  <div class="rt1-section-title">Connect with the<br/> Leading Doctors & <br/>Hospitals</div>
                
-               <div class="container">
-              <div class="row">
-              <div class="section-title-spacer"></div>
-                <div class="col-lg-8 text-center mx-auto">
-                    <div class="rt-section-title-wrapper">
-                        <h2 class="rt-section-title">
-                            <span>Reach Out Before You Fly Out</span>
-                            Connect with the Leading Doctors & Hospitals
-                        </h2>
-                        <p>
-                        You can rely on us for choosing the top specialists and clinics.  The list of doctors and hospitals present on the portal is curated after thorough research and you can expect to find the best-fit as per your requirement. You can rely on us for finding the best doctors in India and around the globe. This is not a google promoted list that we provide.</p>
-                    </div>
+                 </div>
+
                 </div>
-            </div>
-            </div> 
-        <div class="spacer-bottom"></div>
-        </section>
-             </div>
-             </div>
-           </NavContainer></Fragment>  </Grid> 
-        
-     
+              
+              
+           </NavContainer>
+        </Nav>
+      </Fragment>
+           
+         
        </Grid>
     );
 };
