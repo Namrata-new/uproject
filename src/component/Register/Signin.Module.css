@@ -1,25 +1,8 @@
-.container {
-    padding: 100px;
-  }
-  
-  .email-input {
-    width: 300px;
-    padding: 5px 10px;
-  }
-  
-  .message {
-    margin-top: 20px;
-    font-size: 17px; 
-  }
-  
-  .success {
-    color: blue;
-  }
-  
-  .error {
-    color: red;
-  }
+
   .TextField:focus{
     border-color: skyblue;
+  }
+  a:hover{
+     color:rgb(92, 32, 233);
   }
   

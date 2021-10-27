@@ -110,6 +110,8 @@ const Signin =(props)=>{
   const gbuttonStyle={width:'37ch', backgroundColor:'white',height:'5.5ch',color:'black'}
   const buttonStyle={margin:'8px 0',width:'42ch',height:'6ch' }
   const textfieldStyle={width:'38ch', backgroundColor:'white'}
+  const colorstyle={color:'gray'}
+  const h1colorstyle={color:'black'}
   const avtarStyle={backgroundColor:'skyblue'}
   const paperStyle={padding:20,height:'74vh',width :380,margin:"100px auto"}
   const imagesurl='C:\Users\Lenovo\mydemo\src\log.png';
@@ -126,7 +128,7 @@ const Signin =(props)=>{
             <Grid align="center">
             
             <Avatar src={process.env.PUBLIC_URL + "/log.png"}  style={{ width: 56, height: 56 }}/>
-            <h1>Welcome</h1>
+            <h2 style={h1colorstyle}>Welcome</h2>
             </Grid>
            
             <Grid align="center" >
@@ -134,8 +136,8 @@ const Signin =(props)=>{
             
             <br/><br/>
             <FormControl sx={{ m: 1, width: '30ch' }} variant="outlined" style={textfieldStyle}>
-          <InputLabel htmlFor="outlined-adornment-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>Password</InputLabel>
+          <InputLabel htmlFor="outlined-adornment-password" 
+         required>Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
             type={values.showPassword ? 'text' : 'password'}
@@ -166,13 +168,13 @@ const Signin =(props)=>{
         <Grid align="center">
              <Button variant="contained" onClick={getalluser} type='submit'color='primary' style={buttonStyle} fullwidth>Continue</Button>
               <br/><br/>
-        <label>Or</label><br/><br/>
+        <label style={colorstyle}><b>OR</b></label><br/><br/>
         <GoogleButton style={gbuttonStyle}  onClick={() => { console.log('Google button clicked') }}>Continue with Google</GoogleButton>
         <br/>
         
-        <Typography> Don't have an account?
+        <Typography style={colorstyle}> Don't have an account?
           
-        <Link to={{pathname:"/Register"} }>
+        <Link  to={{pathname:"/Register"} }>
            Sign up
         </Link>
                

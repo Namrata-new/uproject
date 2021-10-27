@@ -6,8 +6,10 @@
   
   .navbar.colorChange{
     background-color: gray;
+
     color :skyblue;
     position:fixed;
+  
     width: 100%;
   }
   .navbar.fontcolorChange{
@@ -25,8 +27,10 @@
   }
   .img{
     background-color: transparent;
+  
 
   }
+  
   ul {
     list-style-type: none;
     margin: 0;
@@ -99,6 +103,7 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  color:black;
 }
 
 .dropdown-content a {
@@ -110,7 +115,8 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+ background-color: #ddd;
+  color:black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -185,7 +191,12 @@ max-width: 1100px;
   background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\dotbg.png);
   justify-content:'center';
   align-items: 'center';
-  font-size: x-large;
+  font-size: 3vh;
+  font:bold;
+  font-family: Arial;
+  background-position: center;
+  background-repeat: no-repeat;
+
 
   
  }
@@ -228,4 +239,36 @@ max-width: 1100px;
 .label{
   color:black;
   font-size: x-small;
+}
+.select
+{
+  color:black;
+}
+p{
+  color:black;
+  font-size: 2vh;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 10%;
+  padding: 1px;
+}
+.grid1{
+  background-color: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\bgshapes_1.png);
+  justify-content:'center';
+  align-items: 'center';
+  font-size: 3vh;
+  font:bold;
+  font-family: Arial;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  justify-content: center;
+  background-color: transparent;
+  color:skyblue;
+
 }

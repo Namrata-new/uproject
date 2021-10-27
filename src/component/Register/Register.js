@@ -1,10 +1,10 @@
 import React,{useState}  from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { Visibility } from '@material-ui/icons';
 import { VisibilityOff } from '@material-ui/icons';
 import {InputLabel,FormControl,InputAdornment,OutlinedInput,IconButton,TextField,Button} from '@material-ui/core';
 import axios from 'axios';
+import "./Login.Module.css";
 import ErrorModal from "../UI/ErrorModal";
 
 const Register =(props)=>{
@@ -38,6 +38,7 @@ const Register =(props)=>{
       const buttonStyle={margin:'8px 0',width:'43ch',height:'6ch'}
       const textfieldStyle={width:'38ch', backgroundColor:'white'}
       const avtarStyle={backgroundColor:'skyblue'}
+      const h1colorstyle={color:'black'}
       const paperStyle={padding:20,height:'60vh',width :380,margin:"100px auto"}
       const handleSubmit= e => {
         e.preventDefault();
@@ -47,19 +48,7 @@ const Register =(props)=>{
            password:values.password,
            emailid:values.emailid,
         };
-        if(data.username==="" ){
-          setMessage({
-            title:'Enter Blank',
-            message:'Enter values in Textbox '
-           });
-        }
-        else if(data.password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/)  && data.emailid.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
-             console.log("proper password and email id");
-        }
-        else
-        {
-          console.log("enter the proper pASS");
-        }
+        
         axios.post('http://localhost:3001/loginuser',data).then(
          res => {
            console.log(res.data);
@@ -87,7 +76,7 @@ const Register =(props)=>{
          <Paper style={paperStyle}>
          <Grid align="center">
            <Avatar src={process.env.PUBLIC_URL + "/log.png"}  style={{ width: 56, height: 56 }} />
-              <h2>Register</h2>
+              <h2 style={h1colorstyle}>Register</h2>
             </Grid>
             <Grid align="center" >
             <TextField id="username" value={values.username}  onChange={handleChange('username')} label="User Name" variant="outlined" style={textfieldStyle} fullwidth required/>
