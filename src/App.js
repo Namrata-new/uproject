@@ -26,6 +26,7 @@ import Contactus from './component/Contactus/Contactus';
 import Support from './component/Support/Support';
 import Footer from './component/Footer/Footer';
 import Convertion from './component/Convertion/Convertion';
+import Dashboard from './component/Dashboard/Dashboard';
 function App(){
   useEffect(() => {
     document.title = "eHealthflex Technologis- Medical Tourism ";
