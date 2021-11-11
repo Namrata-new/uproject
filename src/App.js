@@ -5,6 +5,7 @@ import './component/fontawesomeicon';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
+import ScrollButton from './component/angleup/ScrollButton';
 import Forgot from './component/Register/Forgot';
 import Home from './component/Home/Home';
 import Register from './component/Register/Register';
@@ -27,6 +28,7 @@ import Support from './component/Support/Support';
 import Footer from './component/Footer/Footer';
 import Convertion from './component/Convertion/Convertion';
 import Dashboard from './component/Dashboard/Dashboard';
+
 function App(){
   useEffect(() => {
     document.title = "eHealthflex Technologis- Medical Tourism ";
@@ -70,6 +72,9 @@ function App(){
                  <Route exact path="/Support" component={Support} />
                 
              </Switch>
+          
+           	<ScrollButton />
+
          </div>
       </BrowserRouter>
      
@@ -86,3 +91,18 @@ export default App;
     
     
 //   </div> */}
+// import { Fragment } from 'react';
+// import ScrollButton from './components/ScrollButton';
+// import { Content, Heading } from './components/Styles';
+
+// function App() {
+// return (
+// 	<Fragment>
+// 	<Heading>GeeksForGeeks</Heading>
+// 	<Content />
+// 	<ScrollButton />
+// 	</Fragment>
+// );
+// }
+
+// export default App;

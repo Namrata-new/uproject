@@ -2,6 +2,7 @@ import React, { useState, Fragment }from 'react';
 import {Grid,Paper,Avatar} from '@material-ui/core';
 import "./Navbarstyle";
 import "./Navbar.css";
+import CardMedia from '@mui/material/CardMedia';
 import BasicSelect from "../UI/Select/Select";
 import {Card,Typography,CardContent } from "@material-ui/core";
 //import { Stack } from '@mui/material';
@@ -15,6 +16,9 @@ import {InputLabel,FormControl,OutlinedInput,Chip,MenuItem,Box} from '@material-
 import PersonAddAlt1Icon from '@material-ui/icons/PersonAdd';
 import {Nav,NavContainer, NavItem,NavMenu} from './Navbarstyle';
 import useWindowSize from "./useWindowSize";
+import { CardActionArea } from '@mui/material';
+import Theming from "../UI/Themebutton/Theming";
+
 
 const currencynames = [
   'Albanian Lek','East Caribbean Dollar','Euro','Barbadian Dollar','Bhutanese Ngultrum',
@@ -94,6 +98,7 @@ const Navbar = () => {
           
            }
         };
+        
         window.addEventListener('scroll', changeNavbarColor);
        
         const aStyle={align:'Right',color:"Black"}
@@ -106,6 +111,7 @@ const Navbar = () => {
           {width > 500 &&(
             <>
           <Grid >
+            
             <Fragment >
             <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
             <NavContainer>
@@ -146,7 +152,7 @@ const Navbar = () => {
         </Nav>
       </Fragment>  
       
-    
+     
       <Fragment align="left" >
         <Nav className={colorChange ? 'navbar colorChange' : 'navbar'}>
            <NavContainer>
@@ -157,7 +163,7 @@ const Navbar = () => {
               </a>
            
               <NavMenu>
-             
+               <space/>
                 <NavItem>
                  <a href="/Home" >Home</a>
                 </NavItem>
@@ -198,7 +204,7 @@ const Navbar = () => {
                 <NavItem>
                 <div class="dropdown">
                   <a class="dropbtn" href="#">Blog
-                       <i class="fa fa-caret-down"></i>
+                      
                   </a>
                   <div class="dropdown-content">
                     <ul >
@@ -214,13 +220,13 @@ const Navbar = () => {
                   <a  class="link-button" href="/Contactus">Contact Us</a>
                  
                 </NavItem>
-             
+                
               </NavMenu>
            </NavContainer>
         </Nav>
       </Fragment>
 
-    
+     
        <Grid class="grid"> 
          
          <NavContainer>
@@ -266,14 +272,14 @@ const Navbar = () => {
                             
                       </div>
                       <div class="column">
-                            <Avatar   src={process.env.PUBLIC_URL + "s_icon_5.png"} style={{ width: 150, height: 150,margin:'auto 46% ' }}  />
+                            <Avatar class="avatar" src={process.env.PUBLIC_URL + "s_icon_5.png"} style={{ width: 150, height: 150,margin:'auto 46% ' }}  />
                           
                       </div>
                       <div class="column">
-                           <Avatar   src={process.env.PUBLIC_URL + "s_icon_6.png"} style={{ width: 150, height: 150,margin:'auto 24% ' }}  />
+                           <Avatar class="avatar" src={process.env.PUBLIC_URL + "s_icon_6.png"} style={{ width: 150, height: 150,margin:'auto 24% ' }}  />
                       </div>
                       <div class="column">
-                           <Avatar   src={process.env.PUBLIC_URL + "s_icon_7.png"} style={{ width: 150, height: 150,margin:'auto 1%' }}  />
+                           <Avatar class="avatar" src={process.env.PUBLIC_URL + "s_icon_7.png"} style={{ width: 150, height: 150,margin:'auto 1%' }}  />
                       </div>
                
                 </div>
@@ -685,21 +691,55 @@ const Navbar = () => {
                    
                  </div>
             </Paper>
-            <Paper style={paperStyle}>
-              <Grid class="paper">
+           
+            <Paper style={{ margin:"-90%  0%",boxShadow:'none' }} >
+
+              <img  style={{height:"120%", width:"100%"}}class="img" src={process.env.PUBLIC_URL + "/portfoliobg.png"}  />
+               <div style={{margin:"-69%  44%",color:'white',fontFamily:'arial', textAlign: 'center',justifyContent: 'center'}}><h2><b> GLIMPSE OF</b></h2></div><br/>
+
+               <div style={{margin:"67%  20%",color:'white',fontFamily:'arial', textAlign: 'center',justifyContent: 'center'}}>
+               <div class="rt1-section-title" style={{color:'white'}}>
+               Top Medical Tourism <br/>Destinations
+                    </div>
+                    <p  style={{color:'white'}}>We offer the best services and a list of treatment centres as per your requirement. Find the best hospitals<br/> and treatment centres in India and around the globe.</p><br/>
+               <button  class="button-71">Mumbai</button> <space/><space/>
+               <button  class="button-hover">Delhi</button> <space/><space/>
+               <button  class="button-hover">Kolkata</button> <space/><space/>
+               <button  class="button-hover">Pune</button> <space/><space/>
+               <button  class="button-hover">Bangalore</button> <space/><space/>
+               <button  class="button-hover">Hyderabad</button> <space/><space/>
+               <button  class="button-hover">Ahmedabad</button> <space/><space/><br/>
+             </div>
+             <div style={{ margin:'-66% 20%',justifyContent:'center',textAlign:'center'}}>
+             <div class="row">
+                <div class="column1">
+                   <img  src={process.env.PUBLIC_URL + "/11.jpg"}  style={{height:'100%',width:"100%"}} />
+                </div>
+                <div class="column1">
+                   <img  src={process.env.PUBLIC_URL + "/12.jpg"}  style={{height:'100%',width:"100%" }}/>
+                </div>
+                <div class="column1">
+                    <img  src={process.env.PUBLIC_URL + "/13.jpg"} style={{height:'100%',width:"100%"}}/>
+                </div>
+                
+              </div>
+              <div class="row">
+                <div class="column1">
+                   <img  src={process.env.PUBLIC_URL + "/14.jpg"} style={{height:'100%',width:"100%"}} />
+                </div>
+                <div class="column1">
+                   <img  src={process.env.PUBLIC_URL + "/15.jpg"} style={{height:'100%',width:"100%" }}/>
+                </div>
+                <div class="column1">
+                    <img  src={process.env.PUBLIC_URL + "/16.jpg"}  style={{height:'100%',width:"100%"}}/>
+                </div>
+                
+              </div>
+            
+               </div>
                
                
-                        <h2 class="rt-section-title">
-                            <span>Glimpse of</span>
-                            Top Medical Tourism Destinations
-                        </h2>
-                        <p>
-                            We offer the best services and a list of treatment centres as per your requirement. Find the best hospitals and treatment centres in India and around the globe.
-                        </p>
-                 
-             
-              </Grid>
-            </Paper>
+            </Paper> 
             {/* <Paper>
             <div className='footer-container'>
     
@@ -707,33 +747,43 @@ const Navbar = () => {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Company Info</h2>
-            <Link to='#'>nials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='#'>Compliance for International Patient</Link>
+            <Link to='/'>About Us</Link>
+            <Link to='/'>Contact Us</Link>
+            <Link to='/'>Customer Reviews</Link>
+            <Link to='/'>Privacy Policy</Link>
+            <Link to='/'>Business License</Link>
+          
           </div>
           <div class='footer-link-items'>
             <h2>Work With Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
+            <Link to='/'>Become Partner</Link>
+            <Link to='/'>Careers</Link>
+            <Link to='/'>Become Affiliate</Link>
+            <Link to='/'>Associations</Link>
+            <Link to='/'>Advertise with us</Link>
+            <Link to='/'>Retirement Plan</Link>
+            <Link to='/'>Travel APIs</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>My Account</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
+            <Link to='/'>Manage Your Account</Link>
+            <Link to='/'>Build your own trip</Link>
+            <Link to='/'>Order Status</Link>
+            <Link to='/'>Booking Guide</Link>
+            <Link to='/'>Travel Insurance &amp; Safety Guide</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Plan Your Trip</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link to='/'>Special Offers</Link>
+            <Link to='/'>Hotels</Link>
+            <Link to='/'>Flights</Link>
+            <Link to='/'>Tour Packages</Link>
+            <Link to='/'>Accommodations</Link>
+            <Link to='/'>Transportation</Link>
+           
           </div>
         </div>
       </div>

@@ -269,25 +269,11 @@ p{
 
 }
 .avatar:hover{
-  border-radius: 50% 50% 50% 50%;
-  transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
-  -webkit-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
-  -moz-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
-  -o-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
-  -ms-transform: rotate(0deg) scale(0.67) skew(1deg) translate(0px);
+   animation: spin 2s infinite; 
   }
  
   .avatar {
-  border-radius: 50% 50% 50% 50%;
-  transition:All 1s ease;
-  -webkit-transition:All 1s ease;
-  -moz-transition:All 1s ease;
-  -o-transition:All 1s ease;
-  transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-  -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-  -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-  -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-  -ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
+  
   }
   .paperContainer{
     background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\bgshapes_1.png);
@@ -543,4 +529,79 @@ p{
 }
 
 @media screen and (max-width: 768px) {
+}
+.section-title-spacer {
+  height: 40px;
+}
+.button-71 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 56px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+ 
+  padding: 16px 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-hover{ 
+  align-items: center;
+  border: 0;
+  border-radius: 56px;
+  box-sizing: border-box;
+  border: 1px solid #095979;
+  background-color: #004D61;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  padding: 16px 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-hover:hover{
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border:'none';
+}
+.column1{
+  flex: 10%;
+ 
+  float: left;
+ 
+  padding: 10px;
+  
+}
+.column1 img {
+  opacity: 0.8; 
+  cursor: arrows; 
+
+  
+}
+
+.column1 img:hover {
+  opacity: 1;
 }
