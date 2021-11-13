@@ -55,6 +55,7 @@
   
   li a:hover:not(.active) {
    color: rgb(240, 22, 22);
+   
   
   }
   
@@ -65,12 +66,8 @@
   }
   .link-button {
 
-    background: rgb(181, 241, 238) ;
-
-    border: 1px solid #aa8d56;
-
-    color: #aa8d56;
-
+    background: rgb(89, 189, 184) ;  
+    color:white;   
     outline: medium none; 
     text-decoration: none;
     padding: 1rem 1rem;
@@ -99,11 +96,11 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  color:black;
+  color:#413E3E;
 }
 
 .dropdown-content a {
-  color: black;
+  color: #413E3E;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -112,7 +109,7 @@
 
 .dropdown-content a:hover {
  background-color: #ddd;
-  color:black;
+ color:#413E3E;
 }
 
 .dropdown:hover .dropdown-content {
@@ -196,6 +193,22 @@ max-width: 1100px;
 
   
  }
+ .video{
+  color: 'skyblue';
+  background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\videobg.png);
+  justify-content:'center';
+  align-items: 'center';
+  font-size: 3vh;
+  height:'100%';
+  width:'100%';
+  font:bold;
+  font-family: Arial;
+  background-position: 'center';
+  background-repeat: no-repeat;
+  
+
+
+ }
  .card::content{
   justify-content:'center';
  }
@@ -233,15 +246,15 @@ max-width: 1100px;
   color:skyblue;
 }
 .label{
-  color:black;
+  color:#413E3E;
   font-size: x-small;
 }
 .select
 {
-  color:black;
+  color:#413E3E;
 }
 p{
-  color:black;
+  color:#413E3E;
   font-size: 2vh;
 }
 .row {
@@ -258,10 +271,10 @@ p{
   font-size: 3vh;
   font:bold;
   font-family: Arial;
-  background-position: center;
+  background-position: 'center';
   background-repeat: no-repeat;
   padding: 16px;
-  text-align: center;
+  text-align: 'center';
   background-color: #f1f1f1;
   justify-content: center;
   background-color: transparent;
@@ -273,11 +286,12 @@ p{
   }
  
   .avatar {
-  
+    margin: 0;
   }
   .paperContainer{
     background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\bgshapes_1.png);
     background-repeat: no-repeat;
+    background-position: 'center';
     
     height: 100%;
    }
@@ -314,11 +328,9 @@ p{
     }
     .link-button1 {
 
-      background: rgb(181, 241, 238) ;
+      background: rgb(89, 189, 184) ;
   
-      border: 1px solid #aa8d56;
-  
-      color: #aa8d56;
+      color:white;
   
       outline: medium none; 
       text-decoration: none;
@@ -346,6 +358,7 @@ p{
    height:100%;
    background-image: url(C:\Users\Lenovo\mydemo\src\assets\images\backgrounds\bgshapes_1.png);
    background-repeat: no-repeat;
+   background-position: 'center';
    
   
  }
@@ -361,14 +374,14 @@ p{
   font-size: 3vh;
   font:bold;
   font-family: Arial;
-  background-position: center;
+  background-position: 'center';
   background-repeat: no-repeat;
   width:"100%";
  }
 
  
  .footer-container {
-  background-color: #242424;
+  background-color: transparent;
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -385,7 +398,7 @@ p{
 
   margin-bottom: 24px;
   padding: 24px;
-  color: #fff;
+  color: #413E3E;
 }
 
 .footer-subscription > p {
@@ -440,11 +453,11 @@ p{
 }
 
 .footer-link-items > h2 {
-  color: #fff;
+  color: #413E3E;
 }
 
 .footer-link-items a {
-  color: #fff;
+  color: #413E3E;
   text-decoration: none;
   margin-bottom: 0.5rem;
 }
@@ -604,4 +617,34 @@ p{
 
 .column1 img:hover {
   opacity: 1;
+}
+.button111{
+  align-items: center;
+  border: 0;
+  border-radius: 56px;
+  box-sizing: border-box;
+  border: 1px solid none;
+  background-color: #004D61;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 58px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  padding: 16px 21px;
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button111:hover{
+  background-color:red;
+  color:white;
+ 
 }
